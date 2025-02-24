@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/musicList">
+
+    <fragment
+        android:id="@+id/musicList"
+        android:name="com.pjff.musicplayerdiplo.ui.fragments.MusicList"
+        android:label="Music List"
+        tools:layout="@layout/fragment_music_list" >
+        <action
+            android:id="@+id/action_musicList_to_musicPlayer"
+            app:destination="@id/musicPlayer" />
+    </fragment>
+    <fragment
+        android:id="@+id/musicPlayer"
+        android:name="com.pjff.musicplayerdiplo.ui.fragments.MusicPlayer"
+        android:label="Music Player Diplo"
+        tools:layout="@layout/fragment_music_play" >
+        <action
+            android:id="@+id/action_musicPlayer_to_musicList"
+            app:destination="@id/musicList" />
+        <argument
+            android:name="position"
+            app:argType="integer" />
+    </fragment>
+</navigation>
