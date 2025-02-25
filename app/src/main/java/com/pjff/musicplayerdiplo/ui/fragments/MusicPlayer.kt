@@ -22,22 +22,9 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 
-
-/*class MusicPlayer : Fragment() {
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_music_play, container, false)
-    }
-
-}*/
-
-
 class MusicPlayer : Fragment(), MediaPlayer.OnCompletionListener, View.OnClickListener {
 
+    //Paso 1.5
     private var _binding: FragmentMusicPlayBinding? = null
     private val binding get() = _binding
 
@@ -57,7 +44,7 @@ class MusicPlayer : Fragment(), MediaPlayer.OnCompletionListener, View.OnClickLi
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+        //Paso 1.7, Inflate the layout for this fragment
         _binding = FragmentMusicPlayBinding.inflate(inflater, container, false)
         return binding?.root
     }
@@ -113,6 +100,7 @@ class MusicPlayer : Fragment(), MediaPlayer.OnCompletionListener, View.OnClickLi
 
     }
 
+    //Paso 1.6
     override fun onDestroy() {
         super.onDestroy()
         _binding = null

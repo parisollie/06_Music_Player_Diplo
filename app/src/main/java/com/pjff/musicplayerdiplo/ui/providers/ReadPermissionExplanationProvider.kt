@@ -1,5 +1,6 @@
 package com.pjff.musicplayerdiplo.ui.providers
 
+//Paso 1.36
 class ReadPermissionExplanationProvider: PermissionExplanationProvider {
     override fun getPermissionText(): String = "Permiso de lectura"
 

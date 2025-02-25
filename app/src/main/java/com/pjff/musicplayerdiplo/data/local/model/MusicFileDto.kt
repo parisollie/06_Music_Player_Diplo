@@ -1,5 +1,6 @@
 package com.pjff.musicplayerdiplo.data.local.model
 
+//Paso 1.19, ponemos nuestra dataclass
 data class MusicFileDto(
     //Propiedades de inicio
     val path: String,

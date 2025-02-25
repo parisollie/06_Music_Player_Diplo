@@ -1,5 +1,6 @@
 package com.pjff.musicplayerdiplo.ui.providers
 
+//Paso 1.37
 class WritePermissionExplanationProvider: PermissionExplanationProvider {
     override fun getPermissionText(): String = "Permiso de escritura"
 

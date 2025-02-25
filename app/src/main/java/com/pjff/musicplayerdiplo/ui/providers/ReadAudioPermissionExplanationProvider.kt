@@ -1,8 +1,5 @@
 package com.pjff.musicplayerdiplo.ui.providers
-
-
-
-
+//Paso 1.35, le ponemos para el permiso del audio.
 class ReadAudioPermissionExplanationProvider: PermissionExplanationProvider {
     override fun getPermissionText(): String = "Permiso para leer los archivos de audio"
 

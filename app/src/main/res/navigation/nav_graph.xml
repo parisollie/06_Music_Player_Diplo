@@ -5,6 +5,7 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/musicList">
 
+    <!--Paso 1.8, ponemos el navigation-->
     <fragment
         android:id="@+id/musicList"
         android:name="com.pjff.musicplayerdiplo.ui.fragments.MusicList"

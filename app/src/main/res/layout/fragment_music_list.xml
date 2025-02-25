@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/black"
     tools:context=".ui.fragments.MusicList">
-
+    <!--Paso 1.10-->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvSongs"
         android:layout_width="match_parent"

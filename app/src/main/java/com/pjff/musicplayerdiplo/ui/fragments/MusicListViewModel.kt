@@ -7,26 +7,28 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.pjff.musicplayerdiplo.data.local.model.MusicFileDto
 
+//paso 1.20, creamos el ViewModel
 class MusicListViewModel: ViewModel() {
-    //Cola para los strings de los permisos a solicitar
+    //Paso 1.21,Cola para los strings de los permisos a solicitar
     private val permissionsToRequestQueue = mutableListOf<String>()
 
-    //Livedatas
+    //Paso 1.22,Livedatas
     private val _permissionsToRequest = MutableLiveData<List<String>>()
-    //privado guian abajo
+    //Paso 1.23,privado live data que es la version publia,sin el guion abajo
     val permissionsToRequest = _permissionsToRequest
 
+    //Paso 1.24
     private val _musicFiles = MutableLiveData<List<MusicFileDto>>()
-    //Version publica
+    //Version pública
     val musicFiles = _musicFiles
 
-    //Función para quitar los permisos ya concedidos de la cola
+    //Paso 1.25,Función para quitar los permisos ya concedidos de la cola
     fun dismissDialog(){
         if(permissionsToRequestQueue.isNotEmpty())
             permissionsToRequestQueue.removeFirst()
     }
 
-    //Función para manejar el resultado del permiso, si el usuario lo acepta o no
+    //Paso 1.26,Función para manejar el resultado del permiso, si el usuario lo acepta o no
     fun onPermissionResult(
         permission: String,
         //booleano para saber si lo acepto o no
@@ -39,7 +41,7 @@ class MusicListViewModel: ViewModel() {
         }
     }
 
-    //Funcion para tener todo el audio
+    //Paso 2.0,Funcion para tener el audio
     fun getAllAudio(context: Context){
         val tempAudioList = ArrayList<MusicFileDto>()
 
@@ -54,6 +56,7 @@ class MusicListViewModel: ViewModel() {
             MediaStore.Audio.Media.ARTIST
         )
 
+        //para obtener los archivos.
         val cursor = context.contentResolver.query(uri, projection, null, null, null)
 
         //Puedo encontrar alguna cancion

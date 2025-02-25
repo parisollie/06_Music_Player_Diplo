@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="5dp"
     android:background="@color/black">
-
+    <!--Paso 1.11-->
     <ImageView
         android:id="@+id/ivSongImage"
         android:layout_width="60dp"

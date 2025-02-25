@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--Paso 1, ponemos nuestros colores peronalizados-->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="onColor">#FFFF9800</color>

@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    //Ponemos esto
     id 'androidx.navigation.safeargs.kotlin'
 }
 
@@ -31,6 +32,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    //Ponemos el bidning
      buildFeatures{
          viewBinding true
      }
@@ -47,7 +49,7 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.15.1'
 
     //Navigation Component
-            implementation 'androidx.navigation:navigation-fragment-ktx:2.7.4'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.7.4'
     implementation 'androidx.navigation:navigation-ui-ktx:2.7.4'
     implementation 'androidx.core:core-ktx:+'
 
